@@ -1,6 +1,6 @@
 import BN from "bignumber.js"
 
-const sum = (array: BN.Value[]): string => array.length ? BN.sum.apply(null, array.filter(isFinite)).toString() : "0";
+const sum = (array: any): string => array.length ? BN.sum.apply(null, array.filter(isFinite)).toString() : "0";
 const plus = (a?: BN.Value, b?: BN.Value): string => new BN(a || 0).plus(b || 0).toString()
 const div = (a?: BN.Value, b?: BN.Value): string => new BN(a || 0).div(b || 1).toString();
 const gt = (a: BN.Value, b: BN.Value): boolean => new BN(a).gt(b);
