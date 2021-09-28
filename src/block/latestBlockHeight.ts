@@ -1,6 +1,4 @@
-import {constants} from '../constants';
-
-const {LCD_URL} = constants;
+import {LCD_URL} from '../constants';
 
 export const getLatestBlockHeight = async (lcdUrl = LCD_URL) => {
     const response = await fetch( lcdUrl+ 'blocks/latest' );

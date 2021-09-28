@@ -1,8 +1,7 @@
 import { getLpValue } from './getLpValue';
 import { getPrice } from './getPrice';
-import { constants } from '../constants';
+import { MICRO } from '../constants';
 
-const { MICRO } = constants;
 
 export const calculateLpBonding = (bondAmount: string, poolResponse: any ) => {
    const tokenPrice = parseFloat(getPrice(poolResponse));

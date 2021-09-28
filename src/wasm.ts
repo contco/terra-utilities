@@ -1,7 +1,6 @@
 import axios from "axios";
-import {constants} from './constants';
+import { LCD_URL } from './constants';
 
-const { LCD_URL } = constants;
  
 export const wasmStoreRequest = async (contractAddr: string, queryMsg: any, lcdUrl = LCD_URL) => {
     try {

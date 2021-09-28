@@ -1,6 +1,6 @@
 import {math} from '../math';
 
-const {div} = math;
+const { div } = math;
 
 export const getPrice = (poolResponse: any) => {
   if (poolResponse.assets[0].info.native_token && poolResponse.assets[1].info.native_token) {

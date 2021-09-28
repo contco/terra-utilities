@@ -1,3 +1,4 @@
+/* eslint-disable id-denylist */
 import BN from "bignumber.js"
 
 const sum = (array: any): string => array.length ? BN.sum.apply(null, array.filter(isFinite)).toString() : "0";

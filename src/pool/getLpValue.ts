@@ -1,7 +1,5 @@
-import {constants} from '../constants';
+import {UUSD_DENOM, LUNA_DENOM} from '../constants';
 
-const { UUSD_DENOM, LUNA_DENOM } = constants;
- 
 export const getLpValue = (poolResponse: any, price: number, isLuna = false, lunaPrice?: number) => {
     const totalShares = parseFloat(poolResponse.total_share);
     let nativeReserve = 0;
