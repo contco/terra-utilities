@@ -9,7 +9,7 @@ const pkg = require('./package.json')
 
 const libraryName = 'terra-utilities'
 
-export default {
+export default [{
   input: `src/${libraryName}.ts`,
   output: [
     { file: pkg.main, name: camelCase(libraryName), format: 'umd', sourcemap: true },
@@ -24,7 +24,11 @@ export default {
     // Allow json resolution
     json(),
     // Compile TypeScript files
-    typescript({ useTsconfigDeclarationDir: true }),
+    typescript({ 
+      useTsconfigDeclarationDir: true,
+      rollupCommonJSResolveHack: false,
+      clean: true
+    }),
     // Allow bundling cjs modules (unlike webpack, rollup doesn't understand cjs)
     commonjs(),
     // Allow node_modules resolution, so you can use 'external' to control
@@ -35,4 +39,4 @@ export default {
     // Resolve source maps to the original source
     sourceMaps(),
   ],
-}
+}]
