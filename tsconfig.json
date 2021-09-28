@@ -19,6 +19,9 @@
   "include": [
     "src"
   ],
+  "exclude": [
+    "tools",
+  ],
   "typedocOptions": {
     "entryPoints": ["src/terra-utilities.ts"],
     "out": "docs"
