@@ -13,8 +13,8 @@ const toAmount = (
     amount: string,
     decimals = 6,
   ): string => {
-    const number = new BN(amount || 0).div(new BN(10).pow(decimals))
-    return decimal(number.toString(), decimals)
+    const bnAmount = new BN(amount || 0).div(new BN(10).pow(decimals))
+    return decimal(bnAmount.toString(), decimals)
 }
 
 export const math = {

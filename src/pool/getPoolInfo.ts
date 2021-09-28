@@ -3,8 +3,8 @@ import { constants } from '../constants';
 
 const { LCD_URL } = constants;
 
-export const getPoolInfo = async (pool_addr: string, lcd_url = LCD_URL) => {
-    const { data } = await axios.get(lcd_url + `wasm/contracts/${pool_addr}/store`, {
+export const getPoolInfo = async (poolAddr: string, lcdUrl = LCD_URL) => {
+    const { data } = await axios.get(lcdUrl + `wasm/contracts/${poolAddr}/store`, {
       params: {
         query_msg: JSON.stringify({
           pool: {}

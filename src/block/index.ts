@@ -1,7 +1,2 @@
-import { getLatestBlockHeight } from "./latestBlockHeight";
-import { getLatestBlockTime } from "./latestBlockTime";
-
-export const blockHelpers =  {
-  getLatestBlockHeight,
-  getLatestBlockTime
-}
+export { getLatestBlockHeight } from "./latestBlockHeight";
+export { getLatestBlockTime } from "./latestBlockTime";

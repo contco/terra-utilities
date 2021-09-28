@@ -18,5 +18,9 @@
   },
   "include": [
     "src"
-  ]
+  ],
+  "typedocOptions": {
+    "entryPoints": ["src/terra-utilities.ts"],
+    "out": "docs"
+  }
 }

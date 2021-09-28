@@ -4,10 +4,10 @@ import { constants } from '../constants';
 
 const { MICRO } = constants;
 
-export const calculateLpBonding = (bond_amount: string, poolResponse: any ) => {
+export const calculateLpBonding = (bondAmount: string, poolResponse: any ) => {
    const tokenPrice = parseFloat(getPrice(poolResponse));
    const lpValue = getLpValue(poolResponse, tokenPrice);
-   const lpAmount = parseFloat(bond_amount) / MICRO;
+   const lpAmount = parseFloat(bondAmount) / MICRO;
    const lpUstValue = lpAmount * lpValue;
    const token1 = (lpAmount / 2) * lpValue;
    const token2 = token1 / tokenPrice;
