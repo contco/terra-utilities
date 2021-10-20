@@ -1,8 +1,8 @@
+import axios from 'axios';
 import {LCD_URL} from '../constants';
 
 export const getLatestBlockHeight = async (lcdUrl = LCD_URL) => {
-    const response = await fetch( lcdUrl+ 'blocks/latest' );
-    const block = await response.json();
-    return block.block.header.height;
+    const {data} = await axios.get( lcdUrl+ 'blocks/latest' );
+    return data.block.header.height;
   };
   
